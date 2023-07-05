@@ -1,0 +1,60 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.swiper {
+  max-width: 1200px;
+  padding: 20px 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 26px;
+  color: var.$lightColor;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var.$accentColorTwo;
+  transition: .8s opacity ease, .4s transform ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &:active {
+    transform: scale(.8);
+  }
+}
+
+.swiper-button-next {
+  right: 6%;
+}
+
+.swiper-button-prev {
+  left: 6%;
+}
+
+.swiper-pagination {
+
+  &>span {
+    background: var.$accentColorTwo;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -20px;
+}

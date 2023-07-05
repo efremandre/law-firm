@@ -1,0 +1,65 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.hero {
+	position: relative;
+	@include mix.displayFlex(flex, center, center);
+	height: 100%;
+	min-height: 100vh;
+	background: linear-gradient(115deg, #000000 33%, #19003A 97%) url('../../assets/images/hero/bg-hero.png') top center / cover no-repeat;
+
+	@media (any-hover: hover) {
+		background-attachment: fixed;
+	}
+
+	&__wrapper {
+		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		padding-bottom: 1em;
+		text-align: center;
+		letter-spacing: 0.02em;
+	}
+
+	&__main-title {
+		margin-bottom: 0.3em;
+	}
+
+	&__subtitle {
+		@include mix.adaptivFont(20, var.$generalBigTextSizeMin);
+		margin-bottom: 1em;
+		color: #FFFFFF;
+	}
+
+	&__buttons {
+		@include mix.displayFlex(flex, center, center);
+		width: 100%;
+	}
+
+	&__button {
+		box-sizing: border-box;
+	}
+
+	@media (any-hover: none) {
+		&__button_order-call {
+			display: none;
+		}
+
+		&__button_call {
+			display: flex;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&__button_order-call {
+			display: flex;
+		}
+
+		&__button_call {
+			display: none;
+		}
+	}
+}
