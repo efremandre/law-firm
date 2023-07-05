@@ -4,51 +4,14 @@
 @use '../modules/button-dawn';
 
 .contact {
-	@include mix.displayFlex(flex, center, center);
 	color: var.$lightColor;
 
-	@media (any-hover: hover) {
-		background-attachment: fixed;
-	}
-
-	&__wrapper {
-		@include mix.displayFlex(flex, center, center);
-		margin: 0 -1em;
-		flex-wrap: unset;
-	}
-
-	&__title {
-		margin-bottom: 1.3em;
-		color: var.$lightColor;
-	}
-
-	&__contact-block {
-		@include mix.displayFlex(flex, center, center);
-		flex-direction: column;
-		width: 100%;
-		max-width: 500px;
-		margin: 0 auto;
-		padding: 0 1em;
-	}
-
-	&__contact-description {
-		margin-bottom: 15px;
-		text-align: center;
-	}
-
-	&__social {
-		margin-bottom: 20px;
-	}
-
-	&__list {
-		@include mix.displayFlex(flex, center, center);
-	}
-
 	&__form-container {
-		width: 100%;
+		background: var.$accentColor;
 	}
 
 	&__button {
-		max-width: 100%;
+		color: #FFF;
+		border-color: #FFF;
 	}
 }

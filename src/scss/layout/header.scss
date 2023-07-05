@@ -7,14 +7,14 @@ $sizeAfterEl: 1.1em;
 .navigation {
 	position: fixed;
 	z-index: 3;
+	padding: .5em 0;
 	width: 100%;
 	box-sizing: border-box;
 	top: 0;
 	left: 0;
-	padding: .5em 0;
 	color: var.$lightColor;
-	background: none;
-	box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
+	background: var.$mainBg;
+	box-shadow: 0 4px 7px -5px rgba(1, 1, 1, .1);
 	transition: transform .8s ease;
 
 	&._hidden {
@@ -49,7 +49,7 @@ $sizeAfterEl: 1.1em;
 
 .nav {
 	flex: 1 1 auto;
-	@include mix.displayFlex(flex, center, center);
+	@include mix.displayFlex(flex, flex-start, center);
 
 	&__list {
 		@include mix.displayFlex(flex, center, center);
@@ -62,29 +62,15 @@ $sizeAfterEl: 1.1em;
 	&__link {
 		position: relative;
 		display: block;
-		padding: 1em;
+		padding: .5em 1em;
 		font-weight: 400;
 		font-size: #{var.$generalTextSize}+px;
 		line-height: var.$generalLineHeight;
 		transition: text-decoration .8s ease;
 
-		&:before {
-			@extend %pseudoElement;
-			bottom: 15px;
-			left: 18px;
-			width: 0;
-			height: 2px;
-			background: var.$lightColor;
-			transition: width .5s ease-in-out, color .5s ease-in-out;
-		}
-
 		@media (any-hover: hover) {
 			&:hover {
-				color: var.$lightColor;
-
-				&:before {
-					width: 70%;
-				}
+				text-decoration: underline;
 			}
 		}
 	}
@@ -99,12 +85,13 @@ $sizeAfterEl: 1.1em;
 
 		&:after {
 			@extend %pseudoElement;
-			top: calc(50% - ($sizeAfterEl / 2));
+			top: 50%;
 			left: 0;
-			width: $sizeAfterEl;
-			height: $sizeAfterEl;
+			transform: translateY(-50%);
+			width: 24px;
+			height: 24px;
 			background: url('../../assets/images/icon/phone.svg') center center / contain no-repeat;
-			animation: callAnimation 1s ease-in-out infinite;
+			// animation: callAnimation 1s ease-in-out infinite;
 		}
 
 		@media (any-hover: hover) {
