@@ -15,8 +15,9 @@
 						<li><a href="#feedback" class="nav__link">Отзывы</a></li>
 						<li><a href="#contacts" class="nav__link">Контакты</a></li>
 						<li class="nav__item-hidden">
-							@@include('../modules/phone.html', {
-							'text': '+7 (918) 999 99 99',
+							@@include('../modules/button.html', {
+							'href': 'href="tel:+79291799499"',
+							'text': '+7(929) 179-94-99',
 							'class': 'nav__link phone'
 							})</li>
 					</ul>
@@ -24,17 +25,24 @@
 				<div class="navigation__block">
 					<div class="navigation__contactinfo">
 						<div class="navigation__phone phone">
-							@@include('../modules/phone.html', {
-							'text': '+7 (918) 999 99 99',
+							@@include('../modules/button.html', {
+							'href': 'href="tel:+79291799499"',
+							'text': '+7(929) 179-94-99',
 							'class': 'phone__link'
 							})
 						</div>
 					</div>
 					<div class="navigation__social social">
 						<ul class="social__list">
-							<li>@@include('../modules/phone.html', {
+							<li>@@include('../modules/button.html', {
+								'href': 'href="https://wa.me/79291799499"',
 								'text': '<img src="../../assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">',
 								'class': 'social__link social__link_wa'
+								})</li>
+							<li>@@include('../modules/button.html', {
+								'href': 'href="https://t.me/szpotrebitel"',
+								'text': '<img src="../../assets/images/icon/tg.svg" alt="Telegram" title="Telegram">',
+								'class': 'social__link social__link_tg'
 								})</li>
 						</ul>
 					</div>

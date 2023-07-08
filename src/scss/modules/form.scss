@@ -120,10 +120,12 @@
 	&__check {
 		margin-top: 1em;
 		@include mix.adaptivFont(12, 8);
+		color: var.$lightColor;
 		line-height: 1.2em;
 		text-align: center;
 
 		&>p>a {
+			color: var.$lightColor;
 			font-size: 12px;
 			text-decoration: underline;
 

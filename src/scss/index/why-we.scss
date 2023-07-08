@@ -1,0 +1,66 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.why-we {
+	color: var.$lightColor;
+	@include mix.adaptivFont(22, 18);
+	background: url('../../assets/images/bg-why-we.jpg') center center / cover no-repeat;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 1fr auto auto 1fr;
+		grid-gap: 20px;
+		height: 600px;
+	}
+
+
+	&__title-block {
+		grid-area: 1 / 1 / 2 / 13;
+	}
+
+	&__item {
+		padding: 1em 0;
+
+		&_1 {
+			grid-area: 2 / 4 / 3 / 10;
+			border-bottom: 1px solid var.$lightColor;
+		}
+
+		&_2 {
+			grid-area: 3 / 4 / 4 / 7;
+		}
+
+		&_3 {
+			grid-area: 3 / 7 / 4 / 10;
+		}
+	}
+
+	&__buttons {
+		grid-area: 4 / 4 / 5 / 10;
+		display: grid;
+		align-content: end;
+	}
+
+	&__title,
+	&__button {
+		color: var.$lightColor;
+	}
+
+	&__title {
+
+		&::before,
+		&::after {
+			background: var.$lightColor;
+		}
+	}
+
+	&__button {
+		border-color: var.$lightColor;
+	}
+
+	@media (any-hover: hover) {
+		background-attachment: fixed;
+	}
+}

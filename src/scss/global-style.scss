@@ -10,10 +10,13 @@ body {
 	font-family: var.$family;
 	font-weight: 400;
 	line-height: var.$generalLineHeight;
-	letter-spacing: var.$letterSpacing;
 	color: var.$generalColorText;
 	scroll-behavior: smooth;
 	background: var.$mainBg;
+}
+
+address {
+	font-style: normal;
 }
 
 * img {
@@ -94,12 +97,4 @@ a:focus {
 	line-height: var.$titleHeight;
 	letter-spacing: var.$letterSpacing;
 	text-transform: var.$titleTransform;
-}
-
-.red {
-	color: var.$accentColor;
-}
-
-.green {
-	color: var.$accentColorTwo;
 }

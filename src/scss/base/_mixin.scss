@@ -13,3 +13,17 @@
 	$addSize: $pcSize - $mobSize;
 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{var.$widthContainer}));
 }
+
+/// для адаптивной ширины блока
+@mixin adaptivWidth($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: var.$widthContainer - 320;
+	width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{var.$widthContainer}));
+}
+
+/// для адаптивной высоты блока
+@mixin adaptivHeigth($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: var.$widthContainer - 320;
+	height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{var.$widthContainer}));
+}

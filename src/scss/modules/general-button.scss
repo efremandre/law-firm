@@ -5,20 +5,20 @@
 	@include mix.displayFlex(flex, center, center);
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 270px;
-	padding: .5em 1em;
+	padding: 1em 1em;
 	@include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
 	color: var.$linkColor;
 	line-height: var.$generalLineHeight;
 	font-weight: 400;
 	background: transparent;
-	border: 1px solid #012016;
+	border: 1px solid var.$linkColor;
 	border-radius: 0;
-	transition: opacity .5s ease;
+	transition: color .6s ease, background .6s ease;
 
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {
-			opacity: .7;
+			color: var.$lightColor;
+			background: var.$accentColor;
 		}
 	}
 }

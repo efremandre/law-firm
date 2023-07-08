@@ -1,0 +1,14 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+
+.general-phone {
+	color: var.$accentColor;
+	@include mix.adaptivFont(62, 28);
+	line-height: 1.1em;
+
+	@media (any-hover: hover) {
+		button:hover {
+			text-decoration: underline;
+		}
+	}
+}

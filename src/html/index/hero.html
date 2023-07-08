@@ -1,17 +1,36 @@
 <section class="main__hero hero">
 	<div class="container">
 		<div class="hero__wrapper" data-aos="fade-up">
-			<p class="herj__subtitle">Северо-Западное Общество защиты прав потребителей</p>
-			<h1 class="hero__main-title main-title">Расширение ваших возможностей с помощью экспертных юридических услуг</h1>
-			<p class="hero__subtitle">Вам нужны надежные и квалифицированные юридические услуги для вашего бизнеса или личной
-				жизни? Мы - это Ваше универсальное решение!</p>
-			<div class="hero__buttons buttons-animation">
-				@@include('../modules/phone.html', {
-				'text': 'Text',
-				'class': 'hero__button button'
-				})
+			<div class="hero__item hero__item_1">
+				<h1 class="hero__main-title main-title">Северо-Западное Общество защиты прав потребителей</h1>
 			</div>
+			<div class="hero__item hero__item_2">
+				<p class="hero__subtitle">Ведущая юридическая организация, специализирующаяся на защите прав потребителей.</p>
+			</div>
+			<div class="hero__item hero__item_3">
+				<p class="hero__subtitle">Наш опыт и знания позволяют эффективно справляться с самыми сложными ситуациями и
+					бороться за Ваше право на качественные товары и услуги.</p>
+			</div>
+			<div class="hero__item hero__item_4">
+				<p class="hero____subtitle">Вы можете позвонить в любое удобное для Вас время, мы всегда готовы помочь даже по
+					самым неудобным вопросам.</p>
+			</div>
+			<div class="hero__item hero__item_5">
+				<a class="hero__phone general-phone" href="tel:+79291799499">+(7929) 179-94-99</a>
+			</div>
+			<div class="hero__item hero__item_6">
+				<div class="hero__image"></div>
+			</div>
+			<div class="hero__item hero__item_7">
+				<div class="hero__buttons">
+					@@include('../modules/button.html', {
+					'href': 'href="https://wa.me/79291799499"',
+					'text': 'Записаться на консультацию',
+					'class': 'hero__button button'
+					})
+				</div>
+			</div>
+
 		</div>
 	</div>
-	@@include('../modules/button-dawn.html', {})
 </section>

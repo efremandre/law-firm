@@ -1,0 +1,108 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.feedback {
+	position: relative;
+	background: url('../../assets/images/bg-feedback.jpg') center center / cover no-repeat;
+
+	&__title {
+		color: var.$lightColor;
+		margin-bottom: 1em;
+
+		&::before,
+		&::after {
+			background: var.$lightColor;
+		}
+	}
+
+	&__slider-container {
+		position: relative;
+		padding-bottom: 3em;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding: 1em;
+	}
+
+	&__message {
+		position: relative;
+		width: 60%;
+		padding: 1.3em;
+		border-radius: 8px;
+		border: 1px solid var.$generalColorText;
+		background: var.$mainBg;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border: 0 solid transparent;
+			background: transparent;
+		}
+
+		&::after {
+			content: '...';
+			position: absolute;
+			bottom: 0;
+			width: 20px;
+			height: 2px;
+			font-size: 26px;
+			color: var.$mainBg;
+		}
+
+		&:nth-child(1) {
+			margin-left: 27px;
+			margin-bottom: 150px;
+
+			&::before {
+				bottom: -5px;
+				left: -20px;
+				transform: rotate(-20deg);
+				border-right-width: 0px;
+				border-left-width: 26px;
+				border-bottom: 12px solid var.$mainBg;
+			}
+
+			&:after {
+				left: -45px;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-left: auto;
+			margin-right: 30px;
+
+			&::before {
+				bottom: -11px;
+				right: -16px;
+				transform: rotate(45deg);
+				border-left-width: 0px;
+				border-right-width: 26px;
+				border-top: 12px solid var.$mainBg;
+			}
+
+			&:after {
+				right: -45px;
+			}
+		}
+
+
+	}
+
+	&__text {
+		margin-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (any-hover: hover) {
+		background-attachment: fixed;
+	}
+}

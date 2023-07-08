@@ -1,17 +1,45 @@
 @use '../base/variable' as var;
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
-@use '../modules/button-dawn';
 
 .contact {
-	color: var.$lightColor;
+
+	&__title {
+		&:after {
+			display: none;
+		}
+	}
+
+	&__row {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__contact-data {
+		flex: 1 1 auto;
+	}
 
 	&__form-container {
+		flex: 0 1 45%;
 		background: var.$accentColor;
 	}
 
 	&__button {
 		color: #FFF;
 		border-color: #FFF;
+	}
+}
+
+.contact-data {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	&__item {
+		padding-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

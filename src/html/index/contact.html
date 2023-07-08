@@ -1,7 +1,48 @@
 <section id="contact" class="main__contact contact">
 	<div class="container">
-		<h2 class="contact__title subtitle">Наши контакты</h2>
 		<div class="contact__row">
+			<div class="contact__contact-data contact-data">
+				<h2 class="contact__title subtitle">Контакты</h2>
+				<ul class="contact-data__list">
+					<li class="contact-data__item">
+						<p><b>Адрес:</b>
+						<address>
+							г. Санкт-Петербург, Лиговский пр-кт, д. 274 литера А, помещ. №2,3 (офис 208) <br> (3 минуты от метро
+							«Московские ворота»).
+						</address>
+						</p>
+					</li>
+					<li class="contact-data__item">
+						<p><b>Режим работы:</b>
+							<time>10:00-18:00</time>пн-пт
+						</p>
+					</li>
+					<li class="contact-data__item">
+						<p>Суббота и воскресенье по предварительной записи</p>
+					</li>
+					<li class="contact-data__item">
+						<p>Звонки принимаем в любое удобное для Вас время <strong>ежедневно</strong>.</p>
+					</li>
+					<li class="contact-data__item">
+						<p><b>Электронная почта:</b> <a href="mailto:sz.potrebitel@yandex.ru">sz.potrebitel@yandex.ru</a></p>
+					</li>
+					<li class="contact-data__item">
+						<ul class="social__list">
+							<li>@@include('../modules/button.html', {
+								'href': 'href="https://wa.me/79291799499"',
+								'text': '<img src="../../assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">',
+								'class': 'social__link social__link_wa'
+								})</li>
+							<li>@@include('../modules/button.html', {
+								'href': 'href="https://t.me/szpotrebitel"',
+								'text': '<img src="../../assets/images/icon/tg.svg" alt="Telegram" title="Telegram">',
+								'class': 'social__link social__link_tg'
+								})</li>
+						</ul>
+					</li>
+				</ul>
+				<a class="contact__phone general-phone" href="tel:+79291799499">+(7929) 179-94-99</a>
+			</div>
 			<div class="contact__form-container form-container">
 				<div class="form-preloader"></div>
 				<form class="ajax-contact-form contact__form form" action="#">

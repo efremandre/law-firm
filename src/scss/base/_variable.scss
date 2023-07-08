@@ -11,12 +11,12 @@ $subFamily: 'Tinos', 'Arial', 'Helvetica', sans-serif; // font-family допшр
 
 $generalBigTextSize: 18; // font-size текст который надо сделать чуть больше, чем основной
 $generalBigTextSizeMin: 16; // font-size текст который надо сделать чуть больше, чем основной для экрана 320px
-$generalTextSize: 18; // font-size основного текста
-$generalTextSizeMin: 16; // font-size основного текста для экрана 320px
+$generalTextSize: 16; // font-size основного текста
+$generalTextSizeMin: 14; // font-size основного текста для экрана 320px
 
-$generalLineHeight: 1.5em; // line-height основного текста
-$generalBigLineHeight: 1.5em; // line-height основного болшого текста
-$letterSpacing: 0.02em;
+$generalLineHeight: 1.3em; // line-height основного текста
+$generalBigLineHeight: 1.3em; // line-height основного болшого текста
+$letterSpacing: -0.62px;
 
 $generalColorText: #012016; // color основного текста
 $subColorText: #4A4A4A; // color дополнительного текста
@@ -35,9 +35,9 @@ $titleTransform: none; // text-transform
 /// подзаголовок
 $subTitleColor: #012016; // color
 $subTitleWeight: 700; // font-weight
-$subTitleFontSize: 32; // font-size
-$subTitleFontSizeMin: 22; // font-size screen 320px
-$subTitleHeight: 1.5em; // line-height
+$subTitleFontSize: 62; // font-size
+$subTitleFontSizeMin: 32; // font-size screen 320px
+$subTitleHeight: 1.3em; // line-height
 
 /// бургер
 $colorBurger: #012016;
