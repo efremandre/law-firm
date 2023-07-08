@@ -4,66 +4,37 @@
 @use '../modules/logo';
 
 .footer {
-	padding: 2em 0;
 	@include mix.adaptivFont(14, 8);
 	line-height: 1.3em;
 
-	& p {
-		margin: 0;
-	}
-
 	&__wrapper {
 		@include mix.displayFlex(flex, space-between, center);
-		margin: 0 -1em;
+		gap: 10px;
+		padding: 2em 0;
+		border-top: 1px solid #74725B;
 	}
 
-	&__requisites {
-		padding: 0 1em;
-		text-align: left;
-		flex: 0 1 50%;
+	&__column {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		gap: 10px;
+	}
 
-		&>p>a {
-			display: inline-block;
-			margin-top: 4px;
-			text-decoration: underline;
+	&__item {
+		margin-bottom: 0.3em;
 
-			&:hover {
-				text-decoration: none;
-			}
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 
+	&__link {
+		text-decoration: underline;
 
-	&__copyright {
-		flex: 0 1 auto;
-		padding: 0 1em;
-	}
-
-	&__author {
-		margin-top: 1em;
-
-		&>a {
-			position: relative;
-
-			&:before {
-				content: '(´･ᴗ･ `)';
-				position: absolute;
-				visibility: hidden;
-				opacity: 0;
-				width: 70px;
-				height: 20px;
-				top: 0;
-				left: -60px;
-				transition: visibility .6s ease, opacity .6s ease;
-			}
-
+		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
-
-				&:before {
-					visibility: visible;
-					opacity: 1;
-				}
+				text-decoration: none;
 			}
 		}
 	}

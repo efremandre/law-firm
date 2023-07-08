@@ -5,7 +5,7 @@ import AOS from 'aos'
 
 export function aos() {
 	AOS.init({
-		duration: 800,
+		duration: 600,
 		anchorPlacement: 'top-bottom',
 		once: true
 	})

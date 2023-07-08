@@ -1,15 +1,22 @@
 <footer class="footer">
 	<div class="container">
-		<div class="footer__wrapper animation">
-			<div class="footer__requisites">
-				<p><a title="Политика конфиденциальности" target="_blank" href="/privacy.html">Политика конфиденциальности</a>
-				</p>
+		<div class="footer__wrapper">
+			<div class="footer__column">
+				<ul class="footer__list">
+					<li class="footer__item">ООО «Северо-Западное общество защиты прав потребителей»</li>
+					<li class="footer__item">ОГРН 1237800071520</li>
+					<li class="footer__item">ИНН 7810980720</li>
+					<li class="footer__item"><a class="footer__link" title="Политика конфиденциальности" target="_blank"
+							href="/privacy.html">Политика
+							конфиденциальности</a></li>
+				</ul>
 			</div>
-			<div class="footer__copyright">
-				<p>ОГРН ИП 999999999999999999</p>
+			<div class="footer__column">
+				@@include('../modules/logo.html', {
+				'class-logo-wrapper': 'navigation__logo',
+				'class-logo-link': 'navigation__logo-link'
+				})
 				<p>©SITENAME.ru, 2023</p>
-				<address class="footer__author"><a title="Телеграм автора сайта" href="https://t.me/efremandre">задизайнено и
-						разработано efremandre</a></address>
 			</div>
 		</div>
 	</div>

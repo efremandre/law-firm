@@ -24,16 +24,18 @@
 		padding: 0;
 		border: 2px solid var.$accentColor;
 		opacity: .8;
+		background: var.$mainBg;
 		transition: all .5s ease-out;
 
 		&:after {
 			content: '';
 			position: absolute;
-			top: calc(50% - 5px);
-			left: calc(50% - 10px);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			width: 20px;
-			height: 10px;
-			background: url("../../../assets/images/icon/arrow-up.svg") center center / contain no-repeat;
+			height: 20px;
+			background: url("../../../assets/images/icon/arrow-up.svg") center center / cover no-repeat;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
