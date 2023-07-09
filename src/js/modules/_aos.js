@@ -4,9 +4,14 @@
 import AOS from 'aos'
 
 export function aos() {
-	AOS.init({
-		duration: 600,
-		anchorPlacement: 'top-top',
-		once: true
-	})
+	try {
+		AOS.init({
+			duration: 600,
+			anchorPlacement: 'top-top',
+			once: true,
+			disable: 'phone',
+		})
+	} catch (error) {
+		console.error(error)
+	}
 }

@@ -6,13 +6,17 @@
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(3, 1fr) 30px repeat(4, 1fr);
+		grid-template-rows: auto repeat(2, 1fr) 30px repeat(4, 1fr);
 		grid-gap: 20px;
 	}
 
 	&__item {
 		&_1 {
 			grid-area: 1 / 1 / 2 / 13;
+
+			&>.animation-wrapper {
+				margin-bottom: 1.6em;
+			}
 		}
 
 		&_2 {
@@ -24,10 +28,11 @@
 		}
 
 		&_4 {
-			grid-area: 2 / 10 / 3 / 13;
+			grid-area: 2 / 7 / 3 / 13;
 			overflow: hidden;
 			display: grid;
-			align-content: end;
+			align-content: start;
+			place-content: end;
 		}
 
 		&_5 {

@@ -65,7 +65,7 @@ $sizeAfterEl: 1.1em;
 		display: block;
 		padding: .5em 1em;
 		font-weight: 400;
-		font-size: #{var.$generalTextSize}+px;
+		@include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
 		line-height: var.$generalLineHeight;
 		transition: text-decoration .8s ease;
 
