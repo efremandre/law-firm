@@ -3,7 +3,6 @@
 @use '../base/extentsions';
 
 .feedback {
-	// position: relative;
 	background: url('../../assets/images/bg-feedback.jpg') center center / cover no-repeat;
 
 	&__title {
@@ -29,6 +28,7 @@
 	}
 
 	&__message {
+		box-sizing: border-box;
 		position: relative;
 		width: 60%;
 		padding: 1.3em;
@@ -90,8 +90,6 @@
 				right: -45px;
 			}
 		}
-
-
 	}
 
 	&__text {
