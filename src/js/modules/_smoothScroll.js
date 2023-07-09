@@ -1,5 +1,5 @@
 'use strict'
 
 export function smoothScroll() {
-	// SmoothScroll({ stepSize: 100 })
+	SmoothScroll({ stepSize: 50 })
 }
