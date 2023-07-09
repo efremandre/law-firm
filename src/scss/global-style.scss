@@ -64,6 +64,14 @@ a:focus {
 	outline: none;
 }
 
+::selection {
+	background: #eaff0261;
+}
+
+::-moz-selection {
+	background: #e2f700;
+}
+
 .stop-scroll {
 	overflow: hidden;
 }

@@ -25,4 +25,5 @@
 * HTML
 * SCSS
 * JavaScript
-* Swiper*
+* Swiper JS
+* GSAP

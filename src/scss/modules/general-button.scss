@@ -13,12 +13,21 @@
 	background: transparent;
 	border: 2px solid var.$linkColor;
 	border-radius: 0;
-	transition: color .6s ease, background .6s ease;
+	transition: color .6s ease, background 2s ease;
 
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {
 			color: var.$lightColor;
 			background: var.$accentColor;
 		}
+	}
+}
+
+[data-aos="btn-animation"] {
+	opacity: 0;
+	transition: opacity 1s;
+
+	&.aos-animate {
+		opacity: 1;
 	}
 }

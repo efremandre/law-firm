@@ -2,35 +2,7 @@
 @use './base/mixin' as mix;
 @use './base/extentsions';
 
-@media screen and (min-width: 1200px) {
-	.container-bcard {
-		flex-direction: row;
-		gap: 20px;
-		max-width: 1000px;
-	}
-
-	.header-bcard {
-		&__wrapper {
-			@include mix.displayFlex(flex, center, center);
-			flex-direction: column;
-			height: 100%;
-			box-sizing: border-box;
-			border-radius: 8px;
-		}
-	}
-
-	.main-bcard {
-		padding: 0;
-	}
-
-	.footer-bcard {
-		&__wrapper {
-			@include mix.displayFlex(flex, center, center);
-			height: 100%;
-			border-radius: 8px;
-		}
-	}
-}
+@media screen and (min-width: 1200px) {}
 
 @media screen and (max-width: 989.98px) {
 
@@ -48,74 +20,6 @@
 		&__about-services,
 		&__contact {
 			padding: 2em 0;
-		}
-	}
-
-	.about-us {
-		&__row {
-			flex-direction: column;
-			align-items: center;
-			gap: 30px;
-			margin: 0;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin: 1em 0 1.5em 0;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-			flex: 0 1 auto;
-			width: 100%;
-			padding: 0;
-		}
-
-		&__buttons {
-			display: none;
-		}
-	}
-
-	.about-services {
-		&__row {
-			flex-direction: column;
-			align-items: center;
-			gap: 30px;
-			margin: 0;
-		}
-
-		&__content {
-			padding: 0 1em;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin-bottom: 1.5em;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-			flex: 0 1 auto;
-			width: 100%;
-			padding: 0;
-		}
-
-		&__button {
-			margin: 0 auto;
-		}
-	}
-
-	.services {
-		&__grid {
-			grid-gap: 30px;
 		}
 	}
 }
@@ -150,81 +54,6 @@
 		}
 	}
 
-	.fullscreen {
-		&__wrapper-image {
-			height: 300px;
-			margin: 0;
-		}
-	}
-
-	.about-us {
-		&__row {
-			gap: 20px;
-		}
-
-		&__content {
-			padding: 0;
-		}
-
-		&__text {
-			margin: 1em 0 0 0;
-
-			&>p {
-				margin-bottom: 0.5em;
-			}
-		}
-
-		&__image-wrapper {
-			padding: 0;
-		}
-
-		&__buttons {
-			display: none;
-		}
-	}
-
-	.about-services {
-		&__row {
-			gap: 20px;
-		}
-
-		&__content {
-			padding: 0;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin-bottom: 1.5em;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-
-
-			&>img {}
-		}
-
-		&__button {
-			margin: 0 auto;
-		}
-	}
-
-	.services {
-
-		&__wrapper-card {
-			overflow-x: auto;
-			overflow-y: hidden;
-		}
-
-		&__grid {
-			grid-template-columns: repeat(6, 300px);
-			grid-template-rows: repeat(1, 1fr);
-		}
-	}
 }
 
 @media screen and (max-width: 569.98px) {
@@ -241,80 +70,78 @@
 			display: none;
 		}
 	}
-
-	.fullscreen {
-		&__feature-body {
-			display: none;
-		}
-
-		&__buttons {
-			width: 100%;
-			gap: 15px;
-		}
-	}
-
-	.card {
-		&__title-wrapper_services {
-			transform: translateY(73%);
-		}
-
-		&__title-wrapper_services-list {
-			transform: translateY(0);
-		}
-	}
-
-	.main-bcard {
-		padding: 1em;
-	}
-
-	.footer {
-		&__logo {
-			display: block;
-			flex: 0 1 100px;
-		}
-	}
 }
 
 @media screen and (max-width: 429.98px) {
-
-	.footer {
-		&__wrapper {
-			display: block;
-		}
-
-		&__requisites {
-			margin-bottom: 1em;
-			text-align: center;
-		}
-
-		&__copyright {
-			text-align: center;
-
-			&>p {
-				margin-bottom: 1em;
-			}
+	.subtitle {
+		&:after {
+			display: none;
 		}
 	}
 
+	.hero {
+		margin-top: 40px;
+
+		&__wrapper {
+			height: auto;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(8, auto);
+			grid-gap: 20px;
+		}
+
+		&__item {
+
+			/// main-title
+			&_1 {
+				grid-area: 3 / 1 / 4 / 5;
+			}
+
+			/// big-description
+			&_2 {
+				grid-area: 4 / 1 / 5 / 5;
+				font-size: 18px;
+			}
+
+			/// description
+			&_3 {
+				grid-area: 5 / 1 / 6 / 5;
+			}
+
+			/// call
+			&_4 {
+				grid-area: 6 / 1 / 7 / 5;
+			}
+
+			/// phone
+			&_5 {
+				grid-area: 7 / 1 / 8 / 5;
+			}
+
+			/// image
+			&_6 {
+				grid-area: 1 / 1 / 3 / 5;
+			}
+
+			/// button
+			&_7 {
+				grid-area: 8 / 1 / 9 / 5;
+			}
+		}
+
+		&__main-title {
+			margin: 0;
+		}
+
+		&__image {
+			height: 375px;
+		}
+	}
 }
 
 @media screen and (max-width: 319.98px) {
 	.container {
 		padding: 0 0.5em;
-	}
-
-	.wrapper-bcard {
-		padding: 0;
-	}
-
-	.social-bgcard {
-		&__list {
-			display: block;
-
-			&>li {
-				margin-bottom: 1em;
-			}
-		}
 	}
 }
 
