@@ -48,7 +48,9 @@ export function getGsap() {
 			}
 		}
 
-		toggleMenu(menus[0])
+		if (screen.width > 430) {
+			toggleMenu(menus[0])
+		}
 	} catch (error) {
 		console.error(error)
 	}

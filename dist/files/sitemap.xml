@@ -3,8 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 ">
     <url>
-        <loc>https://SITENAME.ru</loc>
-        <lastmod>date</lastmod>
+        <loc>https://szpravo.ru</loc>
+        <lastmod>2023-07-10</lastmod>
         <priority>1</priority>
         <changefreq>always</changefreq>
     </url>
