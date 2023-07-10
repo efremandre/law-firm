@@ -53,6 +53,7 @@
 .accordion {
 	&__group {
 		padding: 1em;
+		padding-bottom: 0.5em;
 		border-top: 1px solid var.$accentColor;
 
 		&:last-child {
@@ -63,6 +64,7 @@
 	&__title {
 		position: relative;
 		margin: 0;
+		margin-bottom: .5em;
 		padding-right: 1em;
 		@include mix.adaptivFont(16, 14);
 		font-weight: 400;

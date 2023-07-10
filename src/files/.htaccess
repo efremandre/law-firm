@@ -31,16 +31,16 @@ RewriteCond %{HTTP_HOST} ^([^www].*)$
 RewriteRule ^(.*)\/$ https://www.%1/$1 [L,R=301]
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
-RewriteRule ^([^.]+)\.html$ https://SITENAME.ru/$1 [R=301,L]
+RewriteRule ^([^.]+)\.html$ https://szpravo.ru/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !(\.[^./]+)$
 RewriteCond %{REQUEST_fileNAME} !-d
 RewriteCond %{REQUEST_fileNAME} !-f
 RewriteRule (.*) /$1.html [L]
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ https://SITENAME.ru/ [R=301,L]
+RewriteRule ^index\.html$ https://szpravo.ru/ [R=301,L]
 
-Redirect 301 /index https://SITENAME.ru
+Redirect 301 /index https://szpravo.ru
 
 <FilesMatch "(?i).*\.(jpe?g|gif|webp|png|swf|pdf)$" >
   Order Allow,Deny

@@ -90,25 +90,26 @@
 			color: var.$lightColor;
 			outline: none;
 			border: none;
+			border-radius: 0;
 			border-bottom: 1px solid var.$lightColor;
 			background: transparent;
-			transition: box-shadow .3s ease;
+			transition: border-bottom-color .6s ease;
 
 			&::placeholder {
 				color: var.$lightColor;
+				opacity: .6;
 			}
 
 			&:-webkit-autofill,
 			&:-webkit-autofill:hover,
 			&:-webkit-autofill:focus,
 			&:-webkit-autofill:active {
-				-webkit-box-shadow: 0 0 0 30px var.$darkColor inset !important;
-				-webkit-text-fill-color: var.$darkColor !important;
+				-webkit-text-fill-color: var.$lightColor !important;
 				-webkit-backdrop-filter: unset;
 			}
 
 			&:focus {
-				box-shadow: 0 10px 8px -4px rgba(154, 154, 154, .3);
+				border-bottom-color: rgba(255, 255, 255, .6);
 			}
 		}
 

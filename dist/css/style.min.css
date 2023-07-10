@@ -2178,20 +2178,21 @@ a:focus {
   color: #fff;
   outline: none;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #fff;
   background: transparent;
-  transition: box-shadow 0.3s ease;
+  transition: border-bottom-color 0.6s ease;
 }
 .form__input > input::placeholder, .form__input > textarea::placeholder {
   color: #fff;
+  opacity: 0.6;
 }
 .form__input > input:-webkit-autofill, .form__input > input:-webkit-autofill:hover, .form__input > input:-webkit-autofill:focus, .form__input > input:-webkit-autofill:active, .form__input > textarea:-webkit-autofill, .form__input > textarea:-webkit-autofill:hover, .form__input > textarea:-webkit-autofill:focus, .form__input > textarea:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #012016 inset !important;
-  -webkit-text-fill-color: #012016 !important;
+  -webkit-text-fill-color: #fff !important;
   -webkit-backdrop-filter: unset;
 }
 .form__input > input:focus, .form__input > textarea:focus {
-  box-shadow: 0 10px 8px -4px rgba(154, 154, 154, 0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 .form__input > textarea {
   resize: none;
@@ -2213,14 +2214,24 @@ a:focus {
 }
 
 .general-phone {
-  display: block;
+  position: relative;
+  display: inline-block;
   color: #074631;
   font-size: calc(28px + 34 * ((100vw - 320px) / 1440));
   line-height: 1.1em;
 }
+.general-phone:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #074631;
+}
 @media (any-hover: hover) {
-  .general-phone:hover {
-    text-decoration: underline;
+  .general-phone:hover:before {
+    height: 2px;
   }
 }
 
@@ -2725,20 +2736,41 @@ a:focus {
 }
 
 .call {
+  overflow: hidden;
   position: relative;
   color: #fff;
-  background: url(../assets/images/bg-call.jpg) center center/cover no-repeat;
 }
-.call__video {
-  display: none;
+.call::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: #074631;
+}
+.call__video {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+@media (any-hover: hover) {
+  .call::before {
+    opacity: 0.6;
+  }
+  .call__video {
+    display: block;
+  }
 }
 .call__title, .call__phone {
   color: #fff;
+}
+.call__title::before, .call__phone::before {
+  background: #fff;
 }
 .call__wrapper {
   display: grid;
@@ -2759,7 +2791,8 @@ a:focus {
   text-align: right;
 }
 .call__title {
-  max-width: 60%;
+  display: inline-block;
+  max-width: 50%;
   line-height: 1.1em;
   font-weight: 400;
   padding-left: 0;
@@ -2767,16 +2800,11 @@ a:focus {
 }
 .call__title:before {
   top: 0;
-  width: 90%;
+  width: 100%;
   background: #fff;
 }
 .call__title:after {
   display: none;
-}
-@media (any-hover: hover) {
-  .call {
-    background-attachment: fixed;
-  }
 }
 
 .case__wrapper {
@@ -2816,6 +2844,7 @@ a:focus {
 
 .accordion__group {
   padding: 1em;
+  padding-bottom: 0.5em;
   border-top: 1px solid #074631;
 }
 .accordion__group:last-child {
@@ -2824,6 +2853,7 @@ a:focus {
 .accordion__title {
   position: relative;
   margin: 0;
+  margin-bottom: 0.5em;
   padding-right: 1em;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1440));
   font-weight: 400;
@@ -3291,6 +3321,10 @@ a:focus {
 @media screen and (max-width: 569.98px) {
   .main__why-we, .main__services, .main__hero, .main__call, .main__case, .main__feedback, .main__contact {
     padding: 1.6rem 0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
   .container {
     padding: 0 1em;

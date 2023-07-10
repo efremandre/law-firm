@@ -3,22 +3,48 @@
 @use '../base/extentsions';
 
 .call {
+	overflow: hidden;
 	position: relative;
 	color: var.$lightColor;
-	background: url(../../assets/images/bg-call.jpg) center center / cover no-repeat;
 
-	&__video {
-		display: none;
+	&::before {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
+		background: #074631;
+	}
+
+	&__video {
+		display: none;
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		top: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	@media (any-hover: hover) {
+
+		&::before {
+			opacity: .6;
+		}
+
+		&__video {
+			display: block;
+		}
 	}
 
 	&__title,
 	&__phone {
 		color: var.$lightColor;
+
+		&::before {
+			background: var.$lightColor;
+		}
 	}
 
 	&__wrapper {
@@ -45,7 +71,8 @@
 	}
 
 	&__title {
-		max-width: 60%;
+		display: inline-block;
+		max-width: 50%;
 		line-height: 1.1em;
 		font-weight: 400;
 		padding-left: 0;
@@ -53,16 +80,12 @@
 
 		&:before {
 			top: 0;
-			width: 90%;
+			width: 100%;
 			background: var.$lightColor;
 		}
 
 		&:after {
 			display: none;
 		}
-	}
-
-	@media (any-hover: hover) {
-		background-attachment: fixed;
 	}
 }
