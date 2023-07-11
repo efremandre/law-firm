@@ -273,8 +273,7 @@
                 </div>
             </section>
             <section class="main__call call">
-                <video poster="./assets/images/bg_call.jpg" autoplay muted loop class="call__video" src="./assets/images/video.mp4">
-                </video>
+
                 <div class="container">
                     <div class="call__wrapper">
                         <div class="call__item call__item_1">
@@ -518,19 +517,18 @@
                             <div class="form-preloader"></div>
                             <form class="ajax-contact-form contact__form form" action="#">
                                 <div class="form__input">
-                                    <input id="name" type="text" name="name" placeholder="Ваше имя">
+                                    <input id="name" type="text" name="name" placeholder="Ваше имя" data-input-req>
                                 </div>
                                 <div class="form__input">
-                                    <input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
+                                    <input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern data-input-req>
                                 </div>
                                 <div class="form__input">
-                                    <input id="email" type="email" name="email" placeholder="Ваша почта">
+                                    <input id="email" type="email" name="email" placeholder="Ваша почта" data-input-req>
                                 </div>
-
                                 <div class="form__input">
                                     <textarea id="message" name="message" cols="40" rows="3" class="message" placeholder="Сообщение..."></textarea>
                                 </div>
-                                <button class="contact__button button">Отправить</button>
+                                <button class="contact__button button" disabled="disabled" data-button-send>Отправить</button>
                                 <div class="form__check">
                                     <p>Нажимая кнопку вы подтверждаете что ознакомились с<br><a title="Политика конфиденциальности" target="_blank" href="/privacy.html">политикой конфиденциальности</a></p>
                                 </div>

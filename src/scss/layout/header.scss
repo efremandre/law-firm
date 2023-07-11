@@ -13,11 +13,10 @@ $sizeAfterEl: 1.1em;
 	left: 0;
 	color: var.$lightColor;
 	background: var.$mainBg;
-	// box-shadow: 0 4px 7px -5px rgba(1, 1, 1, .1);
-	transition: transform .8s ease;
+	transition: all .6s ease;
 
 	&._hidden {
-		transform: translateY(-150%);
+		top: -100%;
 	}
 
 	&__zero-block {
