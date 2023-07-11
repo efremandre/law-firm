@@ -3,7 +3,7 @@
 @use '../base/extentsions';
 
 .feedback {
-	background: url('../../assets/images/bg-feedback.jpg') center center / cover no-repeat;
+	background: var.$accentColor url('../../assets/images/bg-feedback.jpg') center center / cover no-repeat;
 
 	&__title {
 		color: var.$lightColor;

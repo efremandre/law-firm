@@ -5,7 +5,7 @@
 .why-we {
 	color: var.$lightColor;
 	@include mix.adaptivFont(22, 18);
-	background: url('../../assets/images/bg-why-we.jpg') center center / cover no-repeat;
+	background: var.$accentColor url('../../assets/images/bg-why-we.jpg') center center / cover no-repeat;
 
 	&__wrapper {
 		display: grid;

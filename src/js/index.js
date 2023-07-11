@@ -6,8 +6,7 @@ import { hello } from './modules/_hello.js'
 import { initSlider } from "./modules/_initSlider.js"
 import { pressUp } from "./modules/_pressUp.js"
 import { scrollHeader } from "./modules/_scrollHeader.js"
-import { smoothScroll } from "./modules/_smoothScroll.js"
-
+import { videoBlock } from "./modules/_videoBlock.js"
 
 hello()
 burger()
@@ -16,5 +15,5 @@ scrollHeader()
 pressUp()
 sendForm()
 getGsap()
+videoBlock()
 aos()
-smoothScroll()

@@ -53,6 +53,7 @@
 .accordion {
 	&__group {
 		padding: 1em;
+		padding-right: 0;
 		padding-bottom: 0.5em;
 		border-top: 1px solid var.$accentColor;
 
@@ -65,7 +66,8 @@
 		position: relative;
 		margin: 0;
 		margin-bottom: .5em;
-		padding-right: 1em;
+		padding-right: clamp(1rem, 0.7500rem + 1.2500vw, 2rem);
+		// padding-right: 1.7em;
 		@include mix.adaptivFont(16, 14);
 		font-weight: 400;
 		line-height: 1.3em;
@@ -83,8 +85,10 @@
 			top: 50%;
 			right: 0;
 			transform: translateY(-50%);
-			@include mix.adaptivWidth(40, 15);
-			@include mix.adaptivHeigth(40, 15);
+			width: clamp(1rem, 0.7500rem + 1.2500vw, 2rem);
+			height: clamp(1rem, 0.7500rem + 1.2500vw, 2rem);
+			// @include mix.adaptivWidth(40, 15);
+			// @include mix.adaptivHeigth(40, 15);
 			background: url('../../assets/images/icon/plus.svg') center center / cover no-repeat;
 			transition: trasform 4s ease;
 		}
