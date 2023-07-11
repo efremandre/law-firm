@@ -508,6 +508,8 @@
 	}
 
 	.feedback {
+		background: var.$accentColor;
+
 		&__slider-container {
 			margin-bottom: 0;
 			padding: 0;
