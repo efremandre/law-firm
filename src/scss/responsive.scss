@@ -564,4 +564,10 @@
 	}
 }
 
-@media (any-hover: none) and (orientation: landscape) {}
+@media screen and (max-height: 544px) {
+	.hero {
+		&__wrapper {
+			height: auto;
+		}
+	}
+}
