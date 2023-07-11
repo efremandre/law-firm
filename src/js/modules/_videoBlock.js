@@ -2,15 +2,19 @@
 
 export function videoBlock() {
 	const callBlock = document.querySelector('.call')
-	const videoBlock = document.querySelector('.call__video')
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		videoBlock.remove()
+	if (!isMobile) {
+		let video = document.createElement('div')
+		video.innerHTML = `<video poster="../../assets/images/bg_call.jpg" autoplay muted loop class="call__video"
+			src="../../assets/images/video.mp4">
+		</video>`
+		callBlock.append(video)
+	} else {
 		callBlock.style.background = 'url(../assets/images/bg_call.jpg) center center / cover no-repeat'
 	}
 
 	if (window.innerWidth <= 570) {
-		console.log('test')
 		callBlock.style.background = '#074631'
 	}
 }

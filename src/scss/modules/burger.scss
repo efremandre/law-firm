@@ -4,7 +4,7 @@
 .burger {
 	display: none;
 	position: relative;
-	z-index: 9999;
+	z-index: 6;
 	width: 30px;
 	height: 40px;
 	border: none;
@@ -71,22 +71,22 @@
 	}
 
 	.nav {
+		box-sizing: border-box;
 		position: fixed;
 		z-index: 6;
+		top: 0;
+		left: 100%;
 		width: 100%;
 		height: 100%;
-		top: 0;
-		left: 0;
-		padding: 0 1rem;
+		padding: 1rem;
 		overflow-y: auto;
 		opacity: 0;
-		visibility: hidden;
 		background: var.$mainBg;
-		transition: .6s;
+		transition: all .6s ease;
 
 		&._nav-active {
+			left: 0;
 			opacity: 1;
-			visibility: visible;
 		}
 
 		&__list {
@@ -103,6 +103,7 @@
 			margin-top: 1rem;
 
 			& .social__list {
+				justify-content: flex-end;
 				gap: 30px;
 
 				& .social__link {
@@ -114,9 +115,20 @@
 
 		&__link {
 			padding: .6rem 0;
-			text-align: left;
+			text-align: right;
 			font-size: 32px;
 			font-family: var.$subFamily;
+		}
+	}
+}
+
+@media screen and (max-height: 440px) {
+	.nav {
+		padding-top: 4rem;
+		padding-right: 4rem;
+
+		&__list {
+			justify-content: flex-start;
 		}
 	}
 }
